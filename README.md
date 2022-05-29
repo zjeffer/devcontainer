@@ -1,0 +1,2 @@
+# Default devcontainer base image
+
