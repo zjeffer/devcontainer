@@ -1,9 +1,6 @@
-FROM ubuntu:latest
+FROM archlinux:latest
 
-RUN apt update && apt -y install python3 python3-pip ssh zsh git curl wget sudo
-
-RUN apt install -y locales
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && /usr/sbin/locale-gen
+RUN pacman -Syyu --noconfirm python3 openssh zsh git curl wget sudo
 
 USER root
 ENV HOME /root
