@@ -1,6 +1,6 @@
 FROM archlinux:latest
 
-RUN pacman -Syyu --noconfirm python3 openssh zsh git curl wget sudo base-devel
+RUN pacman -Syyu --noconfirm python3 openssh zsh git curl wget sudo base-devel cmake make gcc gdb ninja
 
 RUN echo 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf && \
     useradd -m -r -s /bin/bash aur && \
